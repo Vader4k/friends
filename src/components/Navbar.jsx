@@ -15,8 +15,8 @@ import { GoTag } from "react-icons/go";
 const Navbar = () => {
 
   const [ islikesOpen, setIsLikesOpen ] = useState(false)
-  const [ isnotiOpen, setIsNotiOpen ] = useState(true)
-
+  const [ isnotiOpen, setIsNotiOpen ] = useState(false)
+  const [ ismessageOpen, setIsMessageOpen ] = useState(true)
 
 
   return (
@@ -37,7 +37,7 @@ const Navbar = () => {
               <BsBell onClick={()=> setIsNotiOpen((prev) => (!prev))}/>
             </div>
             <div className="flex items-center justify-center h-[40px] w-[40px] bg-customBlue rounded-md text-white relative transition-all">
-              <HiOutlineEnvelope />
+              <HiOutlineEnvelope onClick={()=> setIsMessageOpen((prev) => (!prev))}/>
               <div className="absolute p-[5px] rounded-full bg-green-300 top-[-7px] right-[-5px] z-10 border-2 border-white transition-all"/>
             </div>
             <div className="flex items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all">
@@ -218,6 +218,55 @@ const Navbar = () => {
         }
       </div>
       {/* messages */}
+        <div>
+          {
+            ismessageOpen && (
+              <div className="absolute flex flex-col gap-4 bottom-[-430px] left-[200px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
+                <div className="flex justify-between border-b px-5 py-4">
+                    <p className="text-[0.7rem] uppercase text-gray-400 font-medium">messages</p>
+                    <p className="text-gray-400 text-[0.7rem]">INBOX</p>
+                </div>
+                <div className="flex items-start justify-between gap-3 w-full px-5 pb-2 border-b">
+                  <div className="flex items-start gap-4">
+                    <img src={elise} alt="elise" className="w-[35px] h-[35px] object-contain rounded-full" />
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-[0.75rem] font-medium text-gray-600">Nelly Schwartz</h1>
+                      <p className="max-w-[200px] text-[0.8rem] text-gray-400">I think we should meet near the Starbucks so we can get...</p>
+                      <p className="text-[0.65rem] text-gray-400">Yesterday</p>
+                    </div>
+                  </div>
+                  <CiChat1 className=" text-gray-400 text-[1.2rem]"/>
+                </div>
+
+                <div className="flex items-start justify-between gap-3 w-full px-5 pb-2 border-b">
+                  <div className="flex items-start gap-4">
+                    <img src={edward} alt="edward" className="w-[35px] h-[35px] object-contain rounded-full" />
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-[0.75rem] font-medium text-gray-600">Edward Mayers</h1>
+                      <p className="max-w-[200px] text-[0.8rem] text-gray-400">That was a real pleasure seeing you last time we really should...</p>
+                      <p className="text-[0.65rem] text-gray-400">Last week</p>
+                    </div>
+                  </div>
+                  <CiChat1 className=" text-gray-400 text-[1.2rem]"/>
+                </div>
+
+                <div className="flex items-start justify-between gap-3 w-full px-5 pb-2">
+                  <div className="flex items-start gap-4">
+                    <img src={dan} alt="dan" className="w-[35px] h-[35px] object-contain rounded-full" />
+                    <div className="flex flex-col gap-1">
+                      <h1 className="text-[0.75rem] font-medium text-gray-600">Dan Walker</h1>
+                      <p className="max-w-[200px] text-[0.8rem] text-gray-400">Hey there, would it be possible to borrow your bicycle, i really need...</p>
+                      <p className="text-[0.65rem] text-gray-400">jan 03 2020</p>
+                    </div>
+                  </div>
+                  <CiChat1 className=" text-gray-400 text-[1.2rem]"/>
+                </div>
+                <button className="w-full capitalize text-[0.8rem] text-gray-400 bg-whiteBg py-2"> view all</button>
+              </div>
+            )
+          }
+          
+        </div>
     </nav>
   )
 }
