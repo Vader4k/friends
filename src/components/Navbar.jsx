@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward, david, daniel, stella } from '../assets'
 
-import { CiHeart, CiChat1, CiSearch } from "react-icons/ci";
+import { CiHeart, CiChat1, CiSearch, CiFilter } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
@@ -16,7 +16,8 @@ const Navbar = () => {
 
   const [ islikesOpen, setIsLikesOpen ] = useState(false)
   const [ isnotiOpen, setIsNotiOpen ] = useState(false)
-  const [ ismessageOpen, setIsMessageOpen ] = useState(true)
+  const [ ismessageOpen, setIsMessageOpen ] = useState(false)
+  const [ isexploreOpen, setIsExploreOpen ] = useState(true)
 
 
   return (
@@ -267,6 +268,27 @@ const Navbar = () => {
           }
           
         </div>
+      {/* EXPLORE PAGE */}
+      <div>
+        {
+          isexploreOpen && (
+            <div className="w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex items-center justify-center">
+              <div className="w-full max-w-[1000px] m-auto">
+                <div className="flex items-center justify-between w-full">
+                  <h1 className="font-semibold text-[1.5rem]">Explore</h1>
+                  <div className="relative">
+                    <input type="text" placeholder="Filter" className="text-[0.8rem] h-[40px] w-[250px] px-4 outline-none border rounded-[50px]"/>
+                    <CiFilter className="text-[1.2rem] text-gray-500 absolute right-3 top-[10px]"/>
+                  </div>
+                </div>
+                <div>
+                  
+                </div>
+              </div>
+            </div>
+          )
+        }
+      </div>
     </nav>
   )
 }
