@@ -7,10 +7,16 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
 
+import { friendOpen } from "../constants";
 
 const Navbar = () => {
+
+  const [ islikesOpen, setIsLikesOpen ] = useState(true)
+
+
+
   return (
-    <nav className="w-full h-[60px] flex items-center justify-between border-b px-3 bg-white">
+    <nav className="w-full h-[60px] flex items-center justify-between border-b px-3 bg-white relative">
       <div className="w-full flex items-center gap-8">
         <div>
           <img 
@@ -53,7 +59,29 @@ const Navbar = () => {
       </div>
 
       {/* likes */}
-      
+      <div>
+        {
+          islikesOpen && (
+            <div className="absolute flex flex-col gap-4 bottom-[-70px] left-[90px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
+              <div className="flex justify-between border-b p-5">
+                <p className="text-[0.8rem] capitalize text-gray-400 font-medium">Friend request</p>
+                <CiSearch/>
+              </div>
+              <div>
+                {
+                  friendOpen.map((report, index) => (
+                    <div 
+                      key={index}
+                    >
+                      
+                    </div>
+                  ))
+                }
+              </div>
+            </div>
+          )
+        }
+      </div>
     </nav>
   )
 }
