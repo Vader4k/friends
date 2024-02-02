@@ -164,7 +164,7 @@ const Navbar = () => {
       <div>
         {
           isnotiOpen && (
-            <div className="absolute flex flex-col gap-4 bottom-[-410px] left-[90px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
+            <div className="absolute flex flex-col gap-4 bottom-[-410px] left-[130px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
               <div className="flex justify-between border-b px-5 py-4">
                 <p className="text-[0.8rem] capitalize text-gray-400 font-medium">Notifications</p>
                   <BsBell className="text-gray-400"/>
@@ -217,6 +217,7 @@ const Navbar = () => {
           )
         }
       </div>
+      {/* messages */}
     </nav>
   )
 }
