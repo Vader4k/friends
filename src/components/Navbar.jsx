@@ -1,13 +1,14 @@
 import { useState } from "react"
-import { logoBold, jenna } from '../assets'
+import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward  } from '../assets'
 
 import { CiHeart, CiChat1, CiSearch } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
+import { IoPersonRemoveOutline, IoPersonAddOutline  } from "react-icons/io5";
+import { GoTag } from "react-icons/go";
 
-import { friendOpen } from "../constants";
 
 const Navbar = () => {
 
@@ -62,22 +63,96 @@ const Navbar = () => {
       <div>
         {
           islikesOpen && (
-            <div className="absolute flex flex-col gap-4 bottom-[-70px] left-[90px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
-              <div className="flex justify-between border-b p-5">
+            <div className="absolute flex flex-col gap-4 bottom-[-560px] left-[90px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
+              <div className="flex justify-between border-b px-5 py-4">
                 <p className="text-[0.8rem] capitalize text-gray-400 font-medium">Friend request</p>
                 <CiSearch/>
               </div>
-              <div>
-                {
-                  friendOpen.map((report, index) => (
-                    <div 
-                      key={index}
-                    >
-                      
-                    </div>
-                  ))
-                }
+              <div className="flex items-start justify-between w-full px-3 py-2 border-b">
+                <div className="flex items-start gap-3">
+                  <img src={bobby} alt="bobby" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="uppercase text-[0.7rem] font-medium">Bobby Brown</h1>
+                    <p className="max-w-[180px] text-[0.8rem] text-gray-400">Najeel verwick is a common friend</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2 text-gray-400 text-[0.9rem]">
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl ">
+                    <IoPersonAddOutline />
+                  </div>
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl">
+                    <IoPersonRemoveOutline />
+                  </div>
+                </div>
               </div>
+
+              <div className="flex items-start justify-between w-full px-3 py-2 border-b">
+                <div className="flex items-start gap-3">
+                  <img src={dan} alt="dan" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="uppercase text-[0.7rem] font-medium">Dan Walker</h1>
+                    <p className="max-w-[180px] text-[0.8rem] text-gray-400">you have 4 common friends</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400 text-[0.9rem]">
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl ">
+                    <IoPersonAddOutline />
+                  </div>
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl">
+                    <IoPersonRemoveOutline />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-3 py-2 border-b">
+                <div className="flex items-start gap-3">
+                  <img src={nelly} alt="nelly" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <p className="max-w-[250px] text-[0.8rem] text-gray-400">you are now friends with <span className="font-medium">Nelly Schwartz</span>. Check her <span className="font-medium">Profile</span></p>
+                  </div>
+                </div>
+                <GoTag className=" text-gray-400"/>
+              </div>
+
+              <div className="flex items-start justify-between w-full px-3 py-2 border-b">
+                <div className="flex items-start gap-3">
+                  <img src={milly} alt="milly" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="uppercase text-[0.7rem] font-medium">Milly Augustine</h1>
+                    <p className="max-w-[180px] text-[0.8rem] text-gray-400">you have 8 common friends</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400 text-[0.9rem]">
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl ">
+                    <IoPersonAddOutline />
+                  </div>
+                  <div className="flex items-center justify-center h-[35px] w-[35px] bg-whiteBg rounded-xl">
+                    <IoPersonRemoveOutline />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-3 py-2 border-b">
+                <div className="flex items-start gap-3">
+                  <img src={elise} alt="elise" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <p className="max-w-[250px] text-[0.8rem] text-gray-400">you are now friends with <span className="font-medium">Elise Walker</span>. Check her <span className="font-medium">Profile</span></p>
+                  </div>
+                </div>
+                <GoTag className=" text-gray-400"/>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-3 py-2">
+                <div className="flex items-start gap-3">
+                  <img src={edward} alt="nelly" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <p className="max-w-[250px] text-[0.8rem] text-gray-400">you are now friends with <span className="font-medium">Edward Mayers</span>. Check his <span className="font-medium">Profile</span></p>
+                  </div>
+                </div>
+                <GoTag className=" text-gray-400"/>
+              </div>
+              <button className="w-full capitalize text-[0.8rem] text-gray-400 bg-whiteBg py-2"> view all</button>
             </div>
           )
         }

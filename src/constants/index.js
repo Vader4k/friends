@@ -6,23 +6,15 @@ export const friendOpen = [
     {
         name: 'Bobby Brown',
         update: 'Najeel verwick is a common friend',
-        friend: [
-            {
-                add: <IoPersonAddOutline />,
-                remove: <IoPersonRemoveOutline />
-            }
-        ],
+        friend: <IoPersonAddOutline /> ,
+        unfriend: <IoPersonRemoveOutline />,
         img: bobby
     },
     {
         name: 'Dan Walker',
         update: 'You have 4 common friends ',
-        friend: [
-            {
-                add: <IoPersonAddOutline />,
-                remove: <IoPersonRemoveOutline />
-            }
-        ],
+        friend: <IoPersonAddOutline />,
+        unfriend: <IoPersonRemoveOutline />,
         img: dan
     },
     {
@@ -34,12 +26,8 @@ export const friendOpen = [
     {
         name: 'Milly Augustine',
         update: 'Najeel verwick is a common friend',
-        friend: [
-            {
-                add: <IoPersonAddOutline />,
-                remove: <IoPersonRemoveOutline />
-            }
-        ],
+        friend: <IoPersonAddOutline />,
+        unfriend: <IoPersonRemoveOutline />,
         img: milly
     },
     {
