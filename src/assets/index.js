@@ -58,10 +58,10 @@ import slicer from './slicer.svg'
 import stella from './stella.jpg'
 import euro from './tag-euro.svg'
 import upload from './upload.svg'
-import call from './video-call.svg'
+import call from './videocall.svg'
 import videos from './videos.svg'
 import trip from './videotrip.svg'
-import weather from './weather.svg'
+import weather from './weather-bg.svg'
 
 
 export {
