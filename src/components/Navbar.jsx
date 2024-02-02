@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward  } from '../assets'
+import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward, david, daniel, stella } from '../assets'
 
 import { CiHeart, CiChat1, CiSearch } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
@@ -7,12 +7,15 @@ import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
 import { IoPersonRemoveOutline, IoPersonAddOutline  } from "react-icons/io5";
+import { PiYoutubeLogoThin } from "react-icons/pi";
+import { SlPicture } from "react-icons/sl";
 import { GoTag } from "react-icons/go";
 
 
 const Navbar = () => {
 
-  const [ islikesOpen, setIsLikesOpen ] = useState(true)
+  const [ islikesOpen, setIsLikesOpen ] = useState(false)
+  const [ isnotiOpen, setIsNotiOpen ] = useState(true)
 
 
 
@@ -28,10 +31,10 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-3 text-[1.2rem] text-gray-400">
             <div className="flex items-center justify-center h-[40px] w-[40px] rounded-md text-gray-500 hover:text-white hover:bg-red-500 transition-all">
-              <CiHeart />
+              <CiHeart onClick={()=> setIsLikesOpen((prev) => (!prev))}/>
             </div>
             <div className="flex items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-customBlue hover:text-white transition-all">
-              <BsBell />
+              <BsBell onClick={()=> setIsNotiOpen((prev) => (!prev))}/>
             </div>
             <div className="flex items-center justify-center h-[40px] w-[40px] bg-customBlue rounded-md text-white relative transition-all">
               <HiOutlineEnvelope />
@@ -151,6 +154,63 @@ const Navbar = () => {
                   </div>
                 </div>
                 <GoTag className=" text-gray-400"/>
+              </div>
+              <button className="w-full capitalize text-[0.8rem] text-gray-400 bg-whiteBg py-2"> view all</button>
+            </div>
+          )
+        }
+      </div>
+      {/* notification */}
+      <div>
+        {
+          isnotiOpen && (
+            <div className="absolute flex flex-col gap-4 bottom-[-410px] left-[90px] bg-white w-[350px] z-20 border shadow-md rounded-xl">
+              <div className="flex justify-between border-b px-5 py-4">
+                <p className="text-[0.8rem] capitalize text-gray-400 font-medium">Notifications</p>
+                  <BsBell className="text-gray-400"/>
+              </div>
+              <div className="flex items-start justify-between gap-3 w-full px-5 pb-2 border-b">
+                <div className="flex items-start gap-5">
+                  <img src={david} alt="david" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="max-w-[150px] text-[0.8rem] text-gray-400"><span className="font-medium text-gray-600">David KIm</span> commented on <span className="font-medium text-gray-600">your post</span></h1>
+                    <p className="text-[0.65rem] text-gray-400">30 minutes ago</p>
+                  </div>
+                </div>
+                <CiChat1 className=" text-gray-400 text-[1.2rem]"/>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-5 pb-2 border-b">
+                <div className="flex items-start gap-5">
+                  <img src={daniel} alt="daniel" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="max-w-[200px] text-[0.8rem] text-gray-400"><span className="font-medium text-gray-600">Daniel wellington</span> liked your <span className="font-medium text-gray-600">profile</span></h1>
+                    <p className="text-[0.65rem] text-gray-400">43 minutes ago</p>
+                  </div>
+                </div>
+                <CiHeart className=" text-gray-400 text-[1.5rem]"/>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-5 pb-2 border-b">
+                <div className="flex items-start gap-5">
+                  <img src={stella} alt="stella" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="max-w-[200px] text-[0.8rem] text-gray-400"><span className="font-medium text-gray-600">Stella Bergmann</span> shared a <span className="font-medium text-gray-600">New Video</span> on your wall.</h1>
+                    <p className="text-[0.65rem] text-gray-400">Yesterday</p>
+                  </div>
+                </div>
+                <PiYoutubeLogoThin className=" text-gray-400 text-[1.2rem]"/>
+              </div>
+
+              <div className="flex items-start justify-between gap-3 w-full px-5 pb-2">
+                <div className="flex items-start gap-5">
+                  <img src={elise} alt="elsie" className="w-[35px] h-[35px] object-contain rounded-full" />
+                  <div className="flex flex-col ">
+                    <h1 className="max-w-[200px] text-[0.8rem] text-gray-400"><span className="font-medium text-gray-600">Elise Walker</span> shared an <span className="font-medium text-gray-600">Image</span> with you and 2 other people.</h1>
+                    <p className="text-[0.65rem] text-gray-400">2 days ago</p>
+                  </div>
+                </div>
+                <SlPicture className=" text-gray-400 text-[1.2rem]"/>
               </div>
               <button className="w-full capitalize text-[0.8rem] text-gray-400 bg-whiteBg py-2"> view all</button>
             </div>
