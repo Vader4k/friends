@@ -1,15 +1,17 @@
 import { useState } from "react"
-import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward, david, daniel, stella } from '../assets'
+import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward, david, daniel, stella, pizza, slicer } from '../assets'
 
-import { CiHeart, CiChat1, CiSearch, CiFilter } from "react-icons/ci";
-import { FiShoppingCart } from "react-icons/fi";
+import { CiHeart, CiChat1, CiSearch, CiFilter, CiSettings } from "react-icons/ci";
+import { FiHelpCircle, FiShoppingCart } from "react-icons/fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
-import { IoPersonRemoveOutline, IoPersonAddOutline  } from "react-icons/io5";
+import { IoPersonRemoveOutline, IoPersonAddOutline, IoSunnyOutline  } from "react-icons/io5";
 import { PiYoutubeLogoThin } from "react-icons/pi";
 import { SlPicture } from "react-icons/sl";
 import { GoTag } from "react-icons/go";
+import { RiLogoutCircleRLine } from "react-icons/ri";
+
 
 import { explorePage, cartPage } from "../constants";
 
@@ -19,8 +21,10 @@ const Navbar = () => {
   const [ isnotiOpen, setIsNotiOpen ] = useState(false)
   const [ ismessageOpen, setIsMessageOpen ] = useState(false)
   const [ isexploreOpen, setIsExploreOpen ] = useState(false)
-  const [ iscartOpen, setIsCartOpen ] = useState(true)
+  const [ iscartOpen, setIsCartOpen ] = useState(false)
+  const [ isprofileOpen, setIsProfileOpen ] = useState(false)
 
+  // come back for dark mode
 
 
   return (
@@ -63,7 +67,7 @@ const Navbar = () => {
           <FiShoppingCart onClick={()=> setIsCartOpen((prev) => (!prev))}/>
           <div className="absolute p-[4px] rounded-full bg-customBlue top-1 right-[-8px] z-10 border-2 border-white transition-all"/>
         </div>
-        <img src={jenna} alt="profile_photo" className="w-[40px] h-[40px] rounded-full object-contain" />
+        <img src={jenna} alt="profile_photo" className="w-[40px] h-[40px] rounded-full object-contain" onClick={()=> setIsProfileOpen((prev) => (!prev))}/>
       </div>
 
       {/* likes */}
@@ -334,6 +338,85 @@ const Navbar = () => {
           )
         }
       </div>
+
+      {/* PROFILE CONTROL */}
+        <div>
+          {
+            isprofileOpen && (
+              <div>
+                <div className="absolute flex flex-col gap-4 bottom-[-470px] right-[20px] bg-white w-[300px] z-20 border shadow-md rounded-xl">
+                  <div className="w-full p-5  flex items-center border-b justify-between">
+                    <h1 className="uppercase font-bold text-[0.7rem] text-gray-500">jenna davis</h1>
+                    <div>
+                      <IoSunnyOutline className="text-yellow-500"/>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-4 px-5 pb-5">
+                    <div className="flex items-center justify-between border-b py-3">
+                      <div className="flex gap-5 items-center">
+                        <img src={jenna} alt="profile_pic" className="w-[35px] rounded-full"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Jenna Davis</h1>
+                          <p>Main account</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between ">
+                      <div className="flex gap-5 items-center">
+                        <img src={pizza} alt="profile_pic" className="w-[35px] rounded-full"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Fast Pizza</h1>
+                          <p>Company page</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between pb-5 border-b">
+                      <div className="flex gap-5 items-center">
+                        <img src={slicer} alt="profile_pic" className="w-[35px] rounded-full"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Slicer</h1>
+                          <p>Company page</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between ">
+                      <div className="flex gap-5 items-center">
+                        <CiSettings className="text-[1.5rem] text-gray-500"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Settinge</h1>
+                          <p>Access widget settings</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between ">
+                      <div className="flex gap-5 items-center">
+                        <FiHelpCircle className="text-[1.5rem] text-gray-500"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Help</h1>
+                          <p>Contact our support</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center justify-between ">
+                      <div className="flex gap-5 items-center">
+                        <RiLogoutCircleRLine className="text-[1.5rem] text-gray-500"/>
+                        <div className="flex flex-col gap-1 text-[0.75rem] text-gray-500">
+                          <h1 className="font-medium">Log out</h1>
+                          <p>Log out from your account</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }
+        </div>
     </nav>
   )
 }
