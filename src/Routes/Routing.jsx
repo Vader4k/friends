@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
 
 import Home from "../pages/Home"
 import Login from "../pages/Login"
@@ -6,25 +6,50 @@ import Register from "../pages/Register"
 import Profile from "../pages/Profile"
 
 import Layout from '../Layout/Layout'
-import ProtectedRoute from "./ProtectedRoute"
+
+const currentUser = true;
+
+const ProtctedRoute = ({ children }) => {
+  if (!currentUser) {
+    return <Navigate to='/login' />
+  }
+  return children
+}
+
+const router = createBrowserRouter([
+  {
+    path: '/login',
+    element: <Login />
+  },
+  {
+    path: '/register',
+    element: <Register />
+  },
+  {
+    path: '/',
+    element: (
+      <ProtctedRoute>
+        <Layout />
+      </ProtctedRoute>
+    ),
+    children: [
+      {
+        path: '/',
+        element: <Home />
+      },
+      {
+        path: '/profile/:id',
+        element: <Profile />
+      }
+    ]
+  }
+])
 
 const Routing = () => {
   return (
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route
-          path="/"
-          element={
-            <ProtectedRoute>
-              <Layout />
-            </ProtectedRoute>
-          }
-        >
-          <Route index element={<Home />} />
-          <Route path="/profile/:id" element={<Profile />} />
-        </Route>
-      </Routes>
+    <RouterProvider router={router}>
+      <Outlet />
+    </RouterProvider>
   )
 }
 
