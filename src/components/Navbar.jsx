@@ -11,14 +11,16 @@ import { PiYoutubeLogoThin } from "react-icons/pi";
 import { SlPicture } from "react-icons/sl";
 import { GoTag } from "react-icons/go";
 
-import { explorePage } from "../constants";
+import { explorePage, cartPage } from "../constants";
 
 const Navbar = () => {
 
   const [ islikesOpen, setIsLikesOpen ] = useState(false)
   const [ isnotiOpen, setIsNotiOpen ] = useState(false)
   const [ ismessageOpen, setIsMessageOpen ] = useState(false)
-  const [ isexploreOpen, setIsExploreOpen ] = useState(true)
+  const [ isexploreOpen, setIsExploreOpen ] = useState(false)
+  const [ iscartOpen, setIsCartOpen ] = useState(true)
+
 
 
   return (
@@ -58,7 +60,7 @@ const Navbar = () => {
             <CiSearch className="absolute top-3 left-3 text-gray-600"/>
         </div>
         <div className="relative flex items-center justify-center h-[40px] w-fit">
-          <FiShoppingCart />
+          <FiShoppingCart onClick={()=> setIsCartOpen((prev) => (!prev))}/>
           <div className="absolute p-[4px] rounded-full bg-customBlue top-1 right-[-8px] z-10 border-2 border-white transition-all"/>
         </div>
         <img src={jenna} alt="profile_photo" className="w-[40px] h-[40px] rounded-full object-contain" />
@@ -294,6 +296,39 @@ const Navbar = () => {
                     ))
                   }
                 </div>
+              </div>
+            </div>
+          )
+        }
+      </div>
+
+      {/* CART PAGE */}
+      <div>
+        {
+          iscartOpen && (
+            <div className="absolute flex flex-col gap-4 bottom-[-450px] right-[80px] bg-white w-[350px] z-20 border shadow-md rounded-xl p-5">
+              <div className="flex items-center justify-between text-gray-400 p-2 border-b">
+                <button className="text-[0.75rem] outline-none rounded-2xl border p-2">View Cart</button>
+                <div className="text-[0.9rem]">Total: <span className="text-gray-600 text-[1rem]">$193.00</span></div>
+              </div>
+              <div className="flex flex-col gap-3 p-2">
+                {
+                  cartPage.map((item) => (
+                    <div key={item.id} className="flex gap-4 py-2 border-b">
+                      <div>
+                        <img src={item.img} alt={item.name} className="w-[60px]"/>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h1 className="text-[0.9rem] font-medium">{item.name}</h1>
+                        <div className="flex items-center gap-3 text-[0.85rem] text-gray-400">
+                          <p>{item.price}</p>
+                          <p>Qty: {item.qty}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                }
+                <button className="bg-customBlue text-white p-2">chechout</button>
               </div>
             </div>
           )

@@ -1,4 +1,4 @@
-import { feed, friends, videos, euro, cart, house, timer, question, news, cake, envato, calendar, pin, idea, settings} from '../assets'
+import { feed, friends, videos, euro, cart, house, timer, question, news, cake, envato, calendar, pin, idea, settings, shirt, shorts, bag } from '../assets'
 
 export const explorePage = [
     {
@@ -77,4 +77,28 @@ export const explorePage = [
         tag: 'Settings'
     },
 
+]
+
+export const cartPage = [
+    {
+        id: 1,
+        img: shirt,
+        name: 'Cool shirt',
+        price: '$29.00',
+        qty: '01'
+    },
+    {
+        id: 2,
+        img: shorts,
+        name: 'Military Short',
+        price: '$39.00',
+        qty: '01'
+    },
+    {
+        id: 3,
+        img: bag,
+        name: 'Cool Backpack',
+        price: '$29.00',
+        qty: '01'
+    },
 ]
