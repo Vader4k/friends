@@ -272,8 +272,8 @@ const Navbar = () => {
       <div>
         {
           isexploreOpen && (
-            <div className="w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex items-center justify-center">
-              <div className="w-full max-w-[1000px] m-auto">
+            <div className="w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex">
+              <div className="w-full max-w-[1000px] mx-auto py-6">
                 <div className="flex items-center justify-between w-full">
                   <h1 className="font-semibold text-[1.5rem]">Explore</h1>
                   <div className="relative">
@@ -281,7 +281,7 @@ const Navbar = () => {
                     <CiFilter className="text-[1.2rem] text-gray-500 absolute right-3 top-[10px]"/>
                   </div>
                 </div>
-                <div>
+                <div className="flex justify-between p-16 w-full">
                   
                 </div>
               </div>
