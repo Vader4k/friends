@@ -70,7 +70,7 @@ const Navbar = () => {
         <img src={jenna} alt="profile_photo" className="w-[40px] h-[40px] rounded-full object-contain" onClick={()=> setIsProfileOpen((prev) => (!prev))}/>
       </div>
 
-      {/* likes */}
+      {/* Friend REQUEST */}
       <div>
         {
           islikesOpen && (

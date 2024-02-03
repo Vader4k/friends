@@ -9,12 +9,13 @@ export default {
       colors: {
         whiteBg: '#f4f4f4',
         customBlue: '#5496e7',
-        customGreen: '#45d6c5',
+        customGreen: '#44d7c5',
         
       },
       backgroundImage: {
         'bg-img-1': "url('./assets/weather-bg.svg')",
         'bg-img-2': "url('./assets/birthday-bg.svg')",
+        'bg-img-3': "url('./assets/job-bg.svg')",
       }
     },
   },

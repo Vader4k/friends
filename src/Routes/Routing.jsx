@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom"
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Register from "../pages/Register"
-import Profile from "../pages/Register"
+import Profile from "../pages/Profile"
 
 import Layout from '../Layout/Layout'
 import ProtectedRoute from "./ProtectedRoute"
