@@ -8,9 +8,9 @@ const Layout = () => {
   return (
     <div>
       <Navbar />
-        <div className="flex py-5 max-w-[1400px] m-auto">
+        <div className="flex py-5 max-w-[1350px] m-auto items-start gap-8">
           <Leftbar/>
-          <div>
+          <div className="flex-[2]">
             <Outlet />
           </div>
           <Rightbar />

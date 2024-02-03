@@ -28,7 +28,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="w-full h-[60px] flex items-center justify-between border-b px-3 bg-white relative">
+    <nav className="w-full h-[60px] flex items-center justify-between border-b px-3 bg-white relative ">
       <div className="w-full flex items-center gap-8">
         <div>
           <img 

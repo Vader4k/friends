@@ -1,7 +1,7 @@
 
 const Rightbar = () => {
   return (
-    <div>Rightbar</div>
+    <div className="flex-1">Rightbar</div>
   )
 }
 

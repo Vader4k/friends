@@ -11,6 +11,10 @@ export default {
         customBlue: '#5496e7',
         customGreen: '#45d6c5',
         
+      },
+      backgroundImage: {
+        'bg-img-1': "url('./assets/weather-bg.svg')",
+        'bg-img-2': "url('./assets/birthday-bg.svg')",
       }
     },
   },
