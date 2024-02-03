@@ -11,6 +11,7 @@ import { PiYoutubeLogoThin } from "react-icons/pi";
 import { SlPicture } from "react-icons/sl";
 import { GoTag } from "react-icons/go";
 
+import { explorePage } from "../constants";
 
 const Navbar = () => {
 
@@ -45,7 +46,7 @@ const Navbar = () => {
               <CiChat1 />
             </div>
             <div className="flex items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all">
-              <TbGridDots />
+              <TbGridDots onClick={()=> setIsExploreOpen((prev) => (!prev))}/>
             </div>
           </div>
 
@@ -273,16 +274,25 @@ const Navbar = () => {
         {
           isexploreOpen && (
             <div className="w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex">
-              <div className="w-full max-w-[1000px] mx-auto py-6">
+              <div className="w-full max-w-[900px] mx-auto py-6">
                 <div className="flex items-center justify-between w-full">
-                  <h1 className="font-semibold text-[1.5rem]">Explore</h1>
+                  <h1 className="font-semibold text-[1.2rem]">Explore</h1>
                   <div className="relative">
                     <input type="text" placeholder="Filter" className="text-[0.8rem] h-[40px] w-[250px] px-4 outline-none border rounded-[50px]"/>
                     <CiFilter className="text-[1.2rem] text-gray-500 absolute right-3 top-[10px]"/>
                   </div>
                 </div>
-                <div className="flex justify-between p-16 w-full">
-                  
+                <div className="flex justify-between px-16 py-10 w-full flex-wrap gap-x-[6rem] gap-y-[3rem] items-center ">
+                  {
+                    explorePage.map((item) => (
+                      <div  key={item.id}>
+                        <div className="flex flex-col text-center gap-2">
+                          <img src={item.img} alt={item.tag} className="w-[65px]"/>
+                          <p className="text-[0.85rem] font-medium">{item.tag}</p>
+                        </div>
+                      </div>
+                    ))
+                  }
                 </div>
               </div>
             </div>
