@@ -1,13 +1,16 @@
 import { createBrowserRouter, RouterProvider, Navigate, Outlet } from "react-router-dom";
-
+import { useContext } from "react";
 import Home from "../pages/Home"
 import Login from "../pages/Login"
 import Register from "../pages/Register"
 import Profile from "../pages/Profile"
 
 import Layout from '../Layout/Layout'
+import { AuthContext } from "../context/authContext";
 
-const currentUser = true;
+const Routing = () => {
+
+  const {currentUser} = useContext(AuthContext)
 
 const ProtctedRoute = ({ children }) => {
   if (!currentUser) {
@@ -45,7 +48,6 @@ const router = createBrowserRouter([
   }
 ])
 
-const Routing = () => {
   return (
     <RouterProvider router={router}>
       <Outlet />
