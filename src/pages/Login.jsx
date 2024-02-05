@@ -8,11 +8,11 @@ const Login = () => {
 
   const navigate = useNavigate()
 
-  const { Login } = useContext(AuthContext)
+  const { loginUser } = useContext(AuthContext)
 
   const handleLogin = (e) => {
     e.preventDefault()
-    Login()
+    loginUser()
     navigate('/')
 
   }

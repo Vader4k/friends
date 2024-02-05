@@ -8,8 +8,9 @@ export const AuthContextProvider = ({ children }) => {
         JSON.parse(localStorage.getItem("user") || null)
     );
 
-    const login = () => {
+    const loginUser = () => {
         setCurrentUser(true)
+        console.log('true')
     }
 
     useEffect(() => {
@@ -17,7 +18,7 @@ export const AuthContextProvider = ({ children }) => {
     },[currentUser])
 
     return (
-        <AuthContext.Provider value={{currentUser, login}}>
+        <AuthContext.Provider value={{currentUser, loginUser}}>
             {children}
         </AuthContext.Provider>
     )
