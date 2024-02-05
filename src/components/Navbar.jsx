@@ -57,7 +57,7 @@ const Navbar = () => {
           <img 
             src={logoBold} 
             alt="friends_logo" 
-            className="w-[40px] h-[40px]"
+            className="w-[50px] h-[50px]"
           />
         </div>
         <div className="flex items-center gap-3 text-[1.2rem] text-gray-400">
