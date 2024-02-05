@@ -17,24 +17,24 @@ const Home = () => {
 
 
   return (
-    <section className="w-full flex flex-col gap-5 text-gray-500">
+    <section className="w-full flex flex-col gap-7 text-gray-500">
       {/* UPLOAD */}
-      <div className="w-full h-[250px] bg-white rounded-xl text-gray-500">
-        <div className=" w-full flex items-center justify-between px-5">
-          <div className="flex items-center gap-2 text-[0.9rem] border-r py-3 px-10">
+      <div className="w-full h-[250px] bg-white dark:bg-customDark4 rounded-xl text-gray-500 border dark:border-gray-700 overflow-hidden">
+        <div className=" w-full flex items-center justify-between ">
+          <div className="flex items-center gap-2 text-[0.9rem] border-r dark:border-gray-700 py-3 px-16">
             <HiOutlinePencil />
             <p>Publish</p>
           </div>
 
           <div 
-            className="flex items-center gap-2 text-[0.9rem] py-3 border-b w-full px-10 cursor-pointer" 
+            className="flex items-center gap-2 text-[0.9rem] py-3 border-b dark:border-gray-700 dark:bg-customDark4 w-full px-16 cursor-pointer" 
             onClick={()=> setIsAlbumOpen(true)}>
             <HiOutlinePhoto/>
             <p>Albums</p>
           </div>
 
           <div 
-            className="flex items-center gap-2 text-[0.9rem] py-3 px-10 border-b w-full cursor-pointer"
+            className="flex items-center gap-2 text-[0.9rem] py-3 px-10 border-b dark:border-gray-700 dark:bg-customDark4 w-full cursor-pointer"
             onClick={()=> setIsVideoOpen(true)}>
             <IoVideocamOutline />
             <p>Video</p>
@@ -44,19 +44,19 @@ const Home = () => {
         {/* post input */}
         <div className="w-full px-5 flex items-center gap-5 mt-10">
           <img src={jenna} alt="profile_pic" className="w-[45px] rounded-full"/>
-          <input type="text" placeholder="write something about..." className="outline-none text-[0.85rem]"/>
+          <input type="text" placeholder="write something about..." className="outline-none text-[0.85rem] dark:bg-customDark4"/>
         </div>
 
-        <div className="w-full flex items-center gap-3 border-t p-3 mt-16 text-[0.9rem]">
-          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg rounded-xl">
+        <div className="w-full flex items-center gap-3 border-t dark:border-gray-700 p-3 mt-16 text-[0.9rem]">
+          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg dark:bg-customDark3 rounded-xl">
             <CiCamera className="text-[1.5rem]"/>
             <p>Media</p>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg rounded-xl">
+          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg dark:bg-customDark3 rounded-xl">
             <img src={smile} alt="smile" className="w-[20px] h-[20px]"/>
             <p>Activity</p>
           </div>
-          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg rounded-xl">
+          <div className="flex items-center gap-2 px-3 py-1 bg-whiteBg dark:bg-customDark3 rounded-xl">
             <BsThreeDots />
           </div>
         </div>
@@ -523,13 +523,13 @@ const Home = () => {
             {/* modal background to make the body less visible when the navbar is active */}
             <div className="absolute w-full h-full bg-black opacity-80 "></div>
 
-            <div className="p-3 px-4 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white z-10 flex flex-col gap-3 rounded-xl items-center text-center">
-              <div className="w-full flex items-center justify-between border-b py-2">
-                <h1 className="font-medium">Add Photos</h1>
+            <div className="p-3 px-4 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white dark:bg-customDark4 z-10 flex flex-col gap-3 rounded-xl items-center text-center">
+              <div className="w-full flex items-center justify-between border-b dark:border-gray-700 py-2">
+                <h1 className="font-medium dark:text-white">Add Photos</h1>
                 <p className="cursor-pointer" onClick={()=> setIsAlbumOpen(false)}>X</p>
               </div>
               <img src={album} alt="album" className="w-[250px] object-contain"/>
-              <h1 className="font-semibold text-[1rem]">
+              <h1 className="font-semibold text-[1rem] dark:text-white">
                 Manage your photos
               </h1>
               <p className="max-w-[300px]">
@@ -548,13 +548,13 @@ const Home = () => {
             {/* modal background to make the body less visible when the navbar is active */}
             <div className="absolute w-full h-full bg-black opacity-80 "></div>
 
-            <div className="p-3 px-5 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white z-10 flex flex-col gap-3 rounded-xl items-center text-center">
-              <div className="w-full flex items-center justify-between border-b py-2">
-                <h1 className="font-medium">Add Photos</h1>
+            <div className="p-3 px-5 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white dark:bg-customDark4 z-10 flex flex-col gap-3 rounded-xl items-center text-center">
+              <div className="w-full flex items-center justify-between border-b dark:border-gray-700 py-2">
+                <h1 className="font-medium dark:text-white ">Add Photos</h1>
                 <p className="cursor-pointer" onClick={()=> setIsVideoOpen(false)}>X</p>
               </div>
               <img src={trip} alt="album" className="w-[250px] object-contain"/>
-              <h1 className="font-semibold text-[1rem]">
+              <h1 className="font-semibold text-[1rem] dark:text-white">
                 Share live videos
               </h1>
               <p className="max-w-[300px]">
