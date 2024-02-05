@@ -63,12 +63,12 @@ const Home = () => {
       </div>
 
       {/* POSTS 1*/}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:bg-customDark4 dark:text-gray-300 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={dan} alt="dan" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">Dan Walker</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">Dan Walker</h1>
               <p className="text-[0.8rem]">july 26 2022, 01:03pm</p>
             </div>
           </div>
@@ -79,7 +79,7 @@ const Home = () => {
 
         {/* article */}
         <p className="text-[0.9rem]">
-        Yesterday with <span className="font-medium">@Karen Miller</span> and <span className="font-medium">@Marvin </span>Stemperd at the <span className="font-medium">#Rock'n'Rolla</span> concert in LA. Was totally fantastic! People were really excited about this one!
+        Yesterday with <span className="font-medium dark:text-customBlue">@Karen Miller</span> and <span className="font-medium dark:text-customBlue">@Marvin </span>Stemperd at the <span className="font-medium dark:text-customBlue">#Rock'n'Rolla</span> concert in LA. Was totally fantastic! People were really excited about this one!
         </p>
         
         {/* image */}
@@ -134,12 +134,12 @@ const Home = () => {
       </div>
 
       {/* POSTS 2*/}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:text-gray-300 dark:bg-customDark4 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={edward} alt="edward" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">Edward Mayers</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">Edward Mayers</h1>
               <p className="text-[0.8rem]">july 26 2022, 01:03pm</p>
             </div>
           </div>
@@ -150,11 +150,11 @@ const Home = () => {
 
         {/* article */}
         <p className="text-[0.9rem]">
-        You all know how i love bootstrap, but i didn't have time to dig deeper into it. Therefore i found this very interesting video i wanted to share with you all. <span className="font-medium">#bootsrap #webdesign</span>
+        You all know how i love bootstrap, but i didn't have time to dig deeper into it. Therefore i found this very interesting video i wanted to share with you all. <span className="font-medium dark:text-customBlue">#bootsrap #webdesign</span>
         </p>
         
         {/* image */}
-        <div className="w-full flex items-start gap-3 bg-whiteBg p-3">
+        <div className="w-full flex items-start gap-3 bg-whiteBg dark:bg-customDark2 p-3">
           <img src={bootstrap} alt="bootstrap" className="rounded-xl h-[120px] w-[250px] object-cover"/>
           <div className="flex flex-col gap-2">
             <h1 className="text-[1rem] font-medium">
@@ -216,12 +216,12 @@ const Home = () => {
       </div>
 
       {/* POSTS 3*/}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:text-gray-300 dark:bg-customDark4 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={elise} alt="elise" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">Elise Walker</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">Elise Walker</h1>
               <p className="text-[0.8rem]">july 26 2022, 01:03pm</p>
             </div>
           </div>
@@ -232,7 +232,7 @@ const Home = () => {
 
         {/* article */}
         <p className="text-[0.9rem]">
-        Thanks a lot to <span className="font-medium">@Gaelle</span> and <span className="font-medium">@Rolf</span> for this wonderful team lunch. The food was really tasty and we had some great laughs. Thanks to all the team, you're all awesome !
+        Thanks a lot to <span className="font-medium dark:text-customBlue">@Gaelle</span> and <span className="font-medium dark:text-customBlue">@Rolf</span> for this wonderful team lunch. The food was really tasty and we had some great laughs. Thanks to all the team, you're all awesome !
         </p>
         
         {/* image */}
@@ -248,7 +248,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap=0">
-              <h1 className="text-[0.8rem] font-medium">Gaelle, Edward</h1>
+              <h1 className="text-[0.8rem] font-medium dark:text-white">Gaelle, Edward</h1>
               <p className="text-[0.8rem]">and 1 more liked this</p>
             </div>
           </div>
@@ -286,12 +286,12 @@ const Home = () => {
       </div>
 
       {/* POST 4 */}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:bg-customDark4 dark:text-gray-300 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={stella} alt="stella" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">Stella Bergmann</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">Stella Bergmann</h1>
               <p className="text-[0.8rem]">july 16 2022, 01:03pm</p>
             </div>
           </div>
@@ -330,7 +330,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap=0">
-              <h1 className="text-[0.8rem] font-medium">Gaelle, Rolf</h1>
+              <h1 className="text-[0.8rem] font-medium dark:text-white">Gaelle, Rolf</h1>
               <p className="text-[0.8rem]">and 31 more liked this</p>
             </div>
           </div>
@@ -368,12 +368,12 @@ const Home = () => {
       </div>
 
       {/* POSTS 5*/}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:bg-customDark4 dark:text-gray-300 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={david} alt="edward" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">David Kim</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">David Kim</h1>
               <p className="text-[0.8rem]">August 26 2022, 01:03pm</p>
             </div>
           </div>
@@ -384,11 +384,11 @@ const Home = () => {
 
         {/* article */}
         <p className="text-[0.9rem]">
-          Just discovered this awesome CSS framework named #bulmaCss. It's based on flexbox, so easy to use and comes with so many mobile first modifiers. You can build anything from scratch easily with Bulma. <span className="font-medium">#webdesign #bulmaio</span>
+          Just discovered this awesome CSS framework named #bulmaCss. It's based on flexbox, so easy to use and comes with so many mobile first modifiers. You can build anything from scratch easily with Bulma. <span className="font-medium dark:text-customBlue">#webdesign #bulmaio</span>
         </p>
         
         {/* image */}
-        <div className="w-full flex items-start gap-3 bg-whiteBg p-3">
+        <div className="w-full flex items-start gap-3 bg-whiteBg dark:bg-customDark2 p-3">
           <img src={bulma} alt="bulma" className="rounded-xl h-[120px] w-[250px] object-cover"/>
           <div className="flex flex-col gap-2">
             <h1 className="text-[1rem] font-medium">
@@ -412,7 +412,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap-0">
-              <h1 className="text-[0.8rem] font-medium">lana, Mike</h1>
+              <h1 className="text-[0.8rem] font-medium dark:text-white">lana, Mike</h1>
               <p className="text-[0.8rem]">and 1 more liked this</p>
             </div>
           </div>
@@ -450,12 +450,12 @@ const Home = () => {
       </div>
 
       {/* POST 6 */}
-      <div className="w-full bg-white flex flex-col gap-5 p-4 rounded-xl">
+      <div className="w-full bg-white dark:bg-customDark4 dark:text-gray-300 flex flex-col gap-5 p-4 rounded-xl">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={bobby} alt="bobby" className="w-[40px] rounded-full"/>
             <div className="flex flex-col gap-0 ">
-              <h1 className="text-[0.85rem] font-medium">Bobby Brown</h1>
+              <h1 className="text-[0.85rem] font-medium dark:text-white">Bobby Brown</h1>
               <p className="text-[0.8rem]">july 26 2022, 01:03pm</p>
             </div>
           </div>
@@ -466,7 +466,7 @@ const Home = () => {
 
         {/* article */}
         <p className="text-[0.9rem]">
-          Today, when i was walking back home from my job, i figured that i should build the best social media template in ThemeForest. As soon as i got back, i started working on this fresh and new project. Any suggestions about where i could find some interesting resources for social media design?  <span className="font-medium">#webdesign #socialmedia</span>
+          Today, when i was walking back home from my job, i figured that i should build the best social media template in ThemeForest. As soon as i got back, i started working on this fresh and new project. Any suggestions about where i could find some interesting resources for social media design?  <span className="font-medium dark:text-customBlue">#webdesign #socialmedia</span>
         </p>
         
         {/* INTERRACTIONS */}
@@ -478,7 +478,7 @@ const Home = () => {
             </div>
 
             <div className="flex flex-col gap-0">
-              <h1 className="text-[0.8rem] font-medium">Daniel and Elise</h1>
+              <h1 className="text-[0.8rem] font-medium dark:text-white">Daniel and Elise</h1>
               <p className="text-[0.8rem]"> liked this</p>
             </div>
           </div>
@@ -515,7 +515,7 @@ const Home = () => {
         </div>
       </div>
 
-      <button className="w-[150px] m-auto border my-[80px] py-2 bg-white">Load More</button>
+      <button className="w-[150px] m-auto border my-[80px] py-2 bg-white dark:bg-customDark4 dark:text-gray-400 dark:border-none">Load More</button>
 
       {
         isAlbumOpen && (
