@@ -9,34 +9,34 @@ const Rightbar = () => {
   return (
     <section className="flex-1 flex flex-col gap-6">
       {/* STORIES */}
-      <div className="flex flex-col justify-between items-center w-full py-2 rounded-xl bg-white">
-        <div className="flex items-center justify-between p-4 w-full border-b">
-          <h1 className="text-gray-500 text-[0.85rem]">Stories</h1>
+      <div className="flex flex-col justify-between items-center w-full py-2 rounded-xl bg-white dark:bg-customDark4">
+        <div className="flex items-center justify-between p-4 w-full border-b dark:border-gray-700">
+          <h1 className="text-gray-500 text-[0.85rem] dark:text-white">Stories</h1>
           <div>
             <HiOutlineDotsVertical className="text-gray-500"/>
           </div>
         </div>
 
-        <div className="w-full flex items-center gap-3 p-4 border-b">
-          <div className="w-[40px] h-[40px] rounded-full border-dashed border-gray-500 border hover:border-blue-500 hover:border-solid" />
+        <div className="w-full flex items-center gap-3 p-4 border-b dark:border-gray-700">
+          <div className="w-[40px] h-[40px] rounded-full border-dashed border-gray-500 dark:border-white border hover:border-blue-500 hover:border-solid" />
           <div className="flex flex-col gap-1">
-            <h1 className="text-[0.85rem] font-medium text-gray-600">Add a new story</h1>
+            <h1 className="text-[0.85rem] font-medium text-gray-600 dark:text-white">Add a new story</h1>
             <p className="text-[0.8rem] text-gray-500">Share an image, a video or some text</p>
           </div>
       </div>
 
-      <div className="w-full flex items-center gap-3 p-4 border-b">
+      <div className="w-full flex items-center gap-3 p-4 border-b dark:border-gray-700">
         <img src={dan} alt="dan" className="w-[50px] rounded-full p-1 border border-gray-500"/>
         <div className="flex flex-col gap-1">
-          <h1 className="text-[0.85rem] font-medium text-gray-600">Dan Walker</h1>
+          <h1 className="text-[0.85rem] font-medium text-gray-600 dark:text-white">Dan Walker</h1>
           <p className="text-[0.8rem] text-gray-500">1 hour ago</p>
         </div>
       </div>
 
-      <div className="w-full flex items-center gap-3 p-4 border-b">
+      <div className="w-full flex items-center gap-3 p-4 border-b dark:border-gray-700">
         <img src={bobby} alt="bobby" className="w-[50px] rounded-full p-1 border border-gray-500"/>
         <div className="flex flex-col gap-1">
-          <h1 className="text-[0.85rem] font-medium text-gray-600">Bobby Brown</h1>
+          <h1 className="text-[0.85rem] font-medium text-gray-600 dark:text-white">Bobby Brown</h1>
           <p className="text-[0.8rem] text-gray-500">3 days ago</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ const Rightbar = () => {
       <div className="w-full flex items-center gap-3 p-4">
         <img src={elise} alt="elise" className="w-[50px] rounded-full p-1 border border-gray-500"/>
         <div className="flex flex-col gap-1">
-          <h1 className="text-[0.85rem] font-medium text-gray-600">Elsie Walker</h1>
+          <h1 className="text-[0.85rem] font-medium text-gray-600 dark:text-white">Elsie Walker</h1>
           <p className="text-[0.8rem] text-gray-500">Last week</p>
         </div>
       </div>
@@ -65,19 +65,19 @@ const Rightbar = () => {
       </div>
 
       {/* SUGGESTED FRIENDS */}
-      <div className="flex flex-col justify-between items-center w-full py-2 rounded-xl bg-white">
-        <div className="flex items-center justify-between p-4 w-full border-b">
-            <h1 className="text-gray-500 text-[0.85rem]">Suggested Friends</h1>
+      <div className="flex flex-col justify-between items-center w-full py-2 rounded-xl bg-white dark:bg-customDark4">
+        <div className="flex items-center justify-between p-4 w-full border-b dark:border-gray-700">
+            <h1 className="text-gray-500 text-[0.85rem] dark:text-white">Suggested Friends</h1>
             <div>
               <HiOutlineDotsVertical className="text-gray-500"/>
             </div>
           </div>
 
-          <div className="w-full flex justify-between items-center p-4 border-b text-gray-500">
+          <div className="w-full flex justify-between items-center p-4 border-b dark:border-gray-700 text-gray-500">
             <div className="flex items-center gap-3">
               <img src={nelly} alt="nelly" className="w-[40px] rounded-full"/>
               <div className="flex flex-col gap-1">
-                <h1 className="text-[0.85rem] font-medium">Nelly Schwartz</h1>
+                <h1 className="text-[0.85rem] font-medium dark:text-white">Nelly Schwartz</h1>
                 <p className="text-[0.8rem] text-gray-500">Melbourne</p>
               </div>
             </div>
@@ -86,11 +86,11 @@ const Rightbar = () => {
             </div>
         </div>
 
-        <div className="w-full flex justify-between items-center p-4 border-b text-gray-500">
+        <div className="w-full flex justify-between items-center p-4 border-b dark:border-gray-700 text-gray-500">
             <div className="flex items-center gap-3">
               <img src={lana} alt="lana" className="w-[40px] rounded-full"/>
               <div className="flex flex-col gap-1">
-                <h1 className="text-[0.85rem] font-medium">Lana Henrikssen</h1>
+                <h1 className="text-[0.85rem] font-medium dark:text-white">Lana Henrikssen</h1>
                 <p className="text-[0.8rem] text-gray-500">Helsinki</p>
               </div>
             </div>
@@ -99,11 +99,11 @@ const Rightbar = () => {
             </div>
         </div>
 
-        <div className="w-full flex justify-between items-center p-4 border-b text-gray-500">
+        <div className="w-full flex justify-between items-center p-4 border-b dark:border-gray-700 text-gray-500">
             <div className="flex items-center gap-3">
               <img src={gaelle} alt="gaelle" className="w-[40px] rounded-full"/>
               <div className="flex flex-col gap-1">
-                <h1 className="text-[0.85rem] font-medium">Gaelle Morris</h1>
+                <h1 className="text-[0.85rem] font-medium dark:text-white">Gaelle Morris</h1>
                 <p className="text-[0.8rem] text-gray-500">Lyon</p>
               </div>
             </div>
@@ -112,11 +112,11 @@ const Rightbar = () => {
             </div>
         </div>
 
-        <div className="w-full flex justify-between items-center p-4 border-b text-gray-500">
+        <div className="w-full flex justify-between items-center p-4 border-b dark:border-gray-700 text-gray-500">
             <div className="flex items-center gap-3">
               <img src={mike} alt="mike" className="w-[40px] rounded-full"/>
               <div className="flex flex-col gap-1">
-                <h1 className="text-[0.85rem] font-medium">Mike Lasalle</h1>
+                <h1 className="text-[0.85rem] font-medium dark:text-white">Mike Lasalle</h1>
                 <p className="text-[0.8rem] text-gray-500">Toronto</p>
               </div>
             </div>
@@ -129,7 +129,7 @@ const Rightbar = () => {
             <div className="flex items-center gap-3">
               <img src={rolf} alt="rolf" className="w-[40px] rounded-full"/>
               <div className="flex flex-col gap-1">
-                <h1 className="text-[0.85rem] font-medium">Rolf Krupp</h1>
+                <h1 className="text-[0.85rem] font-medium dark:text-white">Rolf Krupp</h1>
                 <p className="text-[0.8rem] text-gray-500">Berlin</p>
               </div>
             </div>
