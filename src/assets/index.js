@@ -62,8 +62,12 @@ import call from './videocall.svg'
 import videos from './videos.svg'
 import trip from './videotrip.svg'
 import weather from './weather-bg.svg'
+import type1 from './type-1.svg'
+import type2 from './type-2.svg'
+import type3 from './type-3.svg'
+import mailbox from './mailbox.svg'
 
 
 export {
-    postImg1, postImg2, postImg3, postImg4, postImg5, postImg6, postImg7, pin, pizza, play, shirt, shorts, bag, album, birthday, bobby, bootstrap, bublle, bulma, calendar, cake, call, cart, timer, feed, dan, daniel, david, edward, elise, settings, slicer, smile, envato, logoBold, logoWhite, friends, gaelle, hanzo, house, alert, feedback, key, success, idea, jenna, job, lana, droid, movies, mike, milly, nelly, news, stella, stream, nuclear, question, rolf, euro, upload, videos, trip, weather
+    postImg1, postImg2, postImg3, postImg4, postImg5, postImg6, postImg7, pin, pizza, play, shirt, shorts, bag, album, birthday, bobby, bootstrap, bublle, bulma, calendar, cake, call, cart, timer, feed, dan, daniel, david, edward, elise, settings, slicer, smile, envato, logoBold, logoWhite, friends, gaelle, hanzo, house, alert, feedback, key, success, idea, jenna, job, lana, droid, movies, mike, milly, nelly, news, stella, stream, nuclear, question, rolf, euro, upload, videos, trip, weather, type1, type2, type3, mailbox
 }

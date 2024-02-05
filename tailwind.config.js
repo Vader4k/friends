@@ -23,6 +23,12 @@ export default {
         'bg-img-1': "url('./assets/weather-bg.svg')",
         'bg-img-2': "url('./assets/birthday-bg.svg')",
         'bg-img-3': "url('./assets/job-bg.svg')",
+        'bg-type-1bg-light': "url('./assets/type-1-bg.svg)",
+        'bg-type-1bg-dark': "url('./assets/type-1-bg-dark.svg)",
+        'bg-type-2bg-light': "url('./assets/type-2-bg.svg)",
+        'bg-type-2bg-dark': "url('./assets/type-2-bg-dark.svg)",
+        'bg-type-3bg-light': "url('./assets/type-3-bg.svg)",
+        'bg-type-3bg-dark': "url('./assets/type-3-bg-dark.svg)",
       }
     },
   },
