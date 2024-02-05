@@ -4,12 +4,17 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  mode: "jit",
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
         whiteBg: '#f4f4f4',
         customBlue: '#5496e7',
         customGreen: '#44d7c5',
+        customDark1: '#151a23',
+        customDark2: '#2e3a50',
+        customDark3: '#181f29'
         
       },
       backgroundImage: {

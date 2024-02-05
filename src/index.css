@@ -13,7 +13,31 @@
 body {
   scroll-behavior: smooth;
   font-family:'Roboto', sans-serif;
-  background: #f4f4f4;
+}
+
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5496e7; /* Change the color on hover */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5496e7 ; /* Set the color of the scrollbar handle */
+  border-radius: 4px; /* Set the border radius of the scrollbar handle */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the color of the scrollbar track */
+}
+
+/* Handle when it's grabbing (clicking and holding) */
+::-webkit-scrollbar-thumb:active {
+  background: #5496e7;
 }
 
 .blure {

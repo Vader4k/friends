@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import { HiOutlinePencil, HiOutlinePhoto } from "react-icons/hi2";
 import { IoVideocamOutline, IoChatbubbleOutline, IoLinkOutline } from "react-icons/io5";
 import { CiCamera, CiHeart } from "react-icons/ci";
@@ -26,12 +26,16 @@ const Home = () => {
             <p>Publish</p>
           </div>
 
-          <div className="flex items-center gap-2 text-[0.9rem] py-3 border-b w-full px-10">
-            <HiOutlinePhoto onClick={()=> setIsAlbumOpen(true)}/>
+          <div 
+            className="flex items-center gap-2 text-[0.9rem] py-3 border-b w-full px-10 cursor-pointer" 
+            onClick={()=> setIsAlbumOpen(true)}>
+            <HiOutlinePhoto/>
             <p>Albums</p>
           </div>
 
-          <div className="flex items-center gap-2 text-[0.9rem] py-3 px-10 border-b w-full">
+          <div 
+            className="flex items-center gap-2 text-[0.9rem] py-3 px-10 border-b w-full cursor-pointer"
+            onClick={()=> setIsVideoOpen(true)}>
             <IoVideocamOutline />
             <p>Video</p>
           </div>
@@ -519,7 +523,7 @@ const Home = () => {
             {/* modal background to make the body less visible when the navbar is active */}
             <div className="absolute w-full h-full bg-black opacity-80 "></div>
 
-            <div className="p-3 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white z-10 flex flex-col gap-3 rounded-xl items-center text-center">
+            <div className="p-3 px-4 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white z-10 flex flex-col gap-3 rounded-xl items-center text-center">
               <div className="w-full flex items-center justify-between border-b py-2">
                 <h1 className="font-medium">Add Photos</h1>
                 <p className="cursor-pointer" onClick={()=> setIsAlbumOpen(false)}>X</p>
@@ -537,6 +541,32 @@ const Home = () => {
           </div>
         )
       }
+
+      {
+        isVideoOpen && (
+          <div className="fixed flex justify-center items-center top-0 left-0 w-full h-full z-50">
+            {/* modal background to make the body less visible when the navbar is active */}
+            <div className="absolute w-full h-full bg-black opacity-80 "></div>
+
+            <div className="p-3 px-5 pb-5 w-[500px] text-[0.85rem] text-gray-500 bg-white z-10 flex flex-col gap-3 rounded-xl items-center text-center">
+              <div className="w-full flex items-center justify-between border-b py-2">
+                <h1 className="font-medium">Add Photos</h1>
+                <p className="cursor-pointer" onClick={()=> setIsVideoOpen(false)}>X</p>
+              </div>
+              <img src={trip} alt="album" className="w-[250px] object-contain"/>
+              <h1 className="font-semibold text-[1rem]">
+                Share live videos
+              </h1>
+              <p className="max-w-[300px]">
+                Lorem ipsum sit dolor amet is a dummy text used by the typography industry and the web industry
+              </p>
+
+              <button className="w-[150px] m-auto bg-customBlue text-white outline-none rounded-xl p-2">Next</button>
+            </div>
+          </div>
+        )
+      }
+
 
     </section>
   )

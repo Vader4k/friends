@@ -6,7 +6,7 @@ import Rightbar from '../components/Rightbar'
 
 const Layout = () => {
   return (
-    <div>
+    <div className="bg-whiteBg dark:bg-customDark2">
       <Navbar />
         <div className="flex py-5 max-w-[1350px] m-auto items-start gap-8">
           <Leftbar/>
