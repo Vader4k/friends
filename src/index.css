@@ -43,3 +43,7 @@ body {
 .blure {
   background-color: rgba(240, 248, 255, 0.267);
 }
+
+.text {
+  text-shadow: 8px 8px #477ee4;
+}

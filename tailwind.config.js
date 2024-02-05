@@ -15,7 +15,8 @@ export default {
         customDark1: '#151a23',
         customDark2: '#2e3a50',
         customDark3: '#181f29',
-        customDark4: '#212936'
+        customDark4: '#212936',
+        customBlue2: '#7fb1ed'
         
       },
       backgroundImage: {
