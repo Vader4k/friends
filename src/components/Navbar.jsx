@@ -319,12 +319,12 @@ const Navbar = () => {
                       <CiFilter className="text-[1.2rem] text-gray-500 absolute right-3 top-[10px]"/>
                     </div>
                   </div>
-                  <div className="flex justify-between ms:px-16 px-10 py-1 w-full flex-wrap ms:gap-x-[6rem] gap-x-[3rem] gap-y-[rem] items-center h-full pb-40 ms:pb-96 ">
+                  <div className="flex justify-between ms:px-16 px-6 py-10 w-full flex-wrap ms:gap-x-[6rem] gap-x-[3rem] gap-y-[rem] items-center h-full pb-[19rem] ms:pb-96 ">
                     {
                       explorePage.map((item) => (
                         <div  key={item.id} >
                           <div className="flex flex-col text-center gap-2">
-                            <img src={item.img} alt={item.tag} className="ms:w-[65px] w-[55px]"/>
+                            <img src={item.img} alt={item.tag} className="ms:w-[65px] w-[50px]"/>
                             <p className="text-[0.85rem] font-medium">{item.tag}</p>
                           </div>
                         </div>
