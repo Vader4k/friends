@@ -13,6 +13,8 @@ import { GoTag } from "react-icons/go";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { FaRegMoon } from "react-icons/fa";
 
+// medium screen navbar icon
+import { FaBars } from "react-icons/fa6";
 
 import { explorePage, cartPage } from "../constants";
 
@@ -52,7 +54,7 @@ const Navbar = () => {
 
   return (
     <nav className="dark:bg-customDark1 dark:border-none dark:text-white w-full h-[60px] flex items-center justify-between border-b px-3 bg-white relative ">
-      <div className="w-full flex items-center gap-8">
+      <div className="w-full flex items-center justify-between md:justify-normal  gap-8">
         <div>
           <img 
             src={logoBold} 
@@ -79,10 +81,14 @@ const Navbar = () => {
             </div>
           </div>
 
+          <div className="text-[1.2rem] text-gray-400 flex items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all">
+            <FaBars />
+          </div>
+
       </div>
 
-      <div className="w-full flex items-center justify-end gap-8">
-        <div className="relative">
+      <div className="w-full md:flex hidden items-center justify-end gap-8 ">
+        <div className="relative ">
           <input type="text" placeholder="Search" className="w-[300px] py-2 pl-10 outline-none bg-whiteBg rounded-3xl text-[0.85rem] dark:bg-customDark2"/>
             <CiSearch className="absolute top-3 left-3 text-gray-600"/>
         </div>

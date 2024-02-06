@@ -8,7 +8,7 @@ import { pizza, droid, nuclear, movies, slicer, milly, hanzo } from '../assets'
 
 const Leftbar = () => {
   return (
-    <section className="flex-1 flex flex-col gap-6">
+    <section className="flex-1 hidden ms:flex ms:flex-col gap-6 md:ml-0 ml-3 ">
       {/* WEATHER */}
       <div className="flex relative flex-col w-[full] bg-customBlue h-[450px] rounded-xl bg-bg-img-1 bg-cover bg-center bg-no-repeat p-3 text-white">
         <div className="absolute w-[50px] h-[50px] flex items-center justify-center hover:bg-blue-600 hover:rounded-full transition-all right-0">

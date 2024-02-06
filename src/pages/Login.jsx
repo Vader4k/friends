@@ -41,7 +41,7 @@ const Login = () => {
 
           <p className='text-center my-4 text-[0.85rem] text-gray-400 cursor-pointer'>
             <Link to='/register'>
-              Forgot Password?
+              Register ?
             </Link>
           </p>
         </form>

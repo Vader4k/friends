@@ -28,6 +28,15 @@ export default {
         'bg-img-5': "url('./assets/type-3-bg.svg')",
       }
     },
+    screens: {
+      xs: "480px",
+      ss: "620px",
+      ms: "770px",
+      sm: "820px",
+      md: "900px",
+      lg: "1200px",
+      xl: "1700px",
+    },
   },
   plugins: [],
 }
