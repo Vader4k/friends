@@ -17,7 +17,7 @@ const Home = () => {
 
 
   return (
-    <section className="ms:w-full flex flex-col gap-7 text-gray-500 w-[410px]">
+    <section className="ms:w-full flex flex-col gap-7 text-gray-500 w-[390px]">
       {/* UPLOAD */}
       <div className="w-full h-[250px] bg-white dark:bg-customDark4 rounded-xl text-gray-500 border dark:border-gray-700 overflow-hidden">
         <div className=" w-full flex items-center justify-between ">
