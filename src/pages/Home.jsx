@@ -17,17 +17,17 @@ const Home = () => {
 
 
   return (
-    <section className="w-full flex flex-col gap-7 text-gray-500">
+    <section className="ms:w-full flex flex-col gap-7 text-gray-500 w-[410px]">
       {/* UPLOAD */}
       <div className="w-full h-[250px] bg-white dark:bg-customDark4 rounded-xl text-gray-500 border dark:border-gray-700 overflow-hidden">
         <div className=" w-full flex items-center justify-between ">
-          <div className="flex items-center gap-2 text-[0.9rem] border-r dark:border-gray-700 py-3 px-16">
+          <div className="flex items-center gap-2 text-[0.9rem] border-r dark:border-gray-700 py-3 ms:px-16 px-5">
             <HiOutlinePencil />
             <p>Publish</p>
           </div>
 
           <div 
-            className="flex items-center gap-2 text-[0.9rem] py-3 border-b dark:border-gray-700 dark:bg-customDark4 w-full px-16 cursor-pointer" 
+            className="flex items-center gap-2 text-[0.9rem] py-3 border-b dark:border-gray-700 dark:bg-customDark4 w-full ms:px-16 px-5 cursor-pointer" 
             onClick={()=> setIsAlbumOpen(true)}>
             <HiOutlinePhoto/>
             <p>Albums</p>

@@ -308,7 +308,7 @@ const Navbar = () => {
       <div>
         {
           isexploreOpen && (
-            <div className="dark:text-gray-400 dark:bg-customDark3 w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex">
+            <div className="dark:text-gray-400 dark:bg-customDark3 w-full h-[100vh] bg-white z-30 absolute left-0 top-[60px] flex px-10 ms:px-0">
               <div className="w-full max-w-[900px] mx-auto py-6">
                 <div className="flex items-center justify-between w-full">
                   <h1 className="font-semibold text-[1.2rem] dark:text-white">Explore</h1>
@@ -317,7 +317,7 @@ const Navbar = () => {
                     <CiFilter className="text-[1.2rem] text-gray-500 absolute right-3 top-[10px]"/>
                   </div>
                 </div>
-                <div className="flex justify-between px-16 py-10 w-full flex-wrap gap-x-[6rem] gap-y-[3rem] items-center ">
+                <div className="flex justify-between ms:px-16 px-10 py-10 w-full flex-wrap ms:gap-x-[6rem] gap-x-[3rem] gap-y-[3rem] items-center ">
                   {
                     explorePage.map((item) => (
                       <div  key={item.id}>
