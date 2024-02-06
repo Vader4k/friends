@@ -21,7 +21,7 @@ const Login = () => {
   }
   return (
     <div className='relative w-[100vw] h-[100vh] flex justify-center items-center'>
-      <div className='flex-1 bg-customBlue2 h-full flex items-center justify-center'>
+      <div className='flex-1 bg-customBlue2 h-full hidden ms:flex items-center justify-center'>
         <h1 className='text-[3.5rem] font-black text-whiteBg text'> Join an <br />Exciting Social <br />Experience.</h1>
       </div>
       <div className='dark:bg-customDark2 flex-1 flex flex-col gap-5 items-center justify-center h-full'>
@@ -47,7 +47,7 @@ const Login = () => {
         </form>
       </div>
 
-      <div className='absolute left-[%] h-[100px] w-[100px] rounded-full bg-customBlue2 flex items-center justify-center border-[6px] border-white'>
+      <div className='absolute left-[%] h-[100px] w-[100px] rounded-full bg-customBlue2 hidden lg:flex items-center justify-center border-[6px] border-white'>
         <img 
           src={logoWhite} 
           alt="logo" 
