@@ -53,7 +53,7 @@ const Register = () => {
           tab === "welcome" && (
             <div className="w-full container px-3 mx-auto">
               <h1 className=" text-center text-[1.2rem] font-medium text-gray-600 mb-10">welcome, select an account type</h1>
-              <div className="flex flex-wrap sm:flex-nowrap items-center gap-10 sm:gap-3 border mx-auto justify-between max-w-[1100px] w-full">
+              <div className="flex flex-wrap sm:flex-nowrap items-center gap-10 sm:gap-3  mx-auto justify-between max-w-[1100px] w-full">
                 {/* block */}
                 <div className=" w-full min-h-[400px] flex flex-col justify-between  px-8 pb-8 pt-0 bg-white rounded-md  border">
                   <div className="relative bg-car-img bg-no-repeat bg-cover max-h-[200px] h-[1000px]">
@@ -159,7 +159,7 @@ const Register = () => {
                 </div>
               </div>
 
-            </div>  
+            </div>
           )
         }
 
@@ -194,7 +194,7 @@ const Register = () => {
               <h1 className="text-[1.3rem] font-medium text-gray-600 text-center mb-5">Secure your account.</h1>
               <div className="mx-auto max-w-[500px]">
                 <div className="bg-white rounded-xl p-8  border">
-                  <form className="flex flex-col gap-5">
+                  <form className="flex flex-col gap-5"> 
                     <div className="relative">
                       <input
                         type="password"
@@ -224,10 +224,10 @@ const Register = () => {
                     </div>
                   </form>
                 </div>
-              <div className="flex gap-4 ml-auto w-fit mt-4">
-                <button className="py-2 px-6 text-[0.75rem] border bg-white rounded-xl hover:text-white hover:bg-blue-400" onClick={() => setTab("profilePic")}>Back</button>
-                <button className="py-2 px-6 text-[0.75rem] border bg-white rounded-xl hover:text-white hover:bg-blue-400" onClick={() => setTab("done")}>Next</button>
-              </div>
+                <div className="flex gap-4 ml-auto w-fit mt-4">
+                  <button className="py-2 px-6 text-[0.75rem] border bg-white rounded-xl hover:text-white hover:bg-blue-400" onClick={() => setTab("profilePic")}>Back</button>
+                  <button className="py-2 px-6 text-[0.75rem] border bg-white rounded-xl hover:text-white hover:bg-blue-400" onClick={() => setTab("done")}>Next</button>
+                </div>
               </div>
 
             </div>
