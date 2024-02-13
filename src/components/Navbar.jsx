@@ -102,7 +102,7 @@ const Navbar = () => {
                         </div>
                         <div onClick={()=> settoggle((prev) => (!prev))}>
                         {
-                          toggle ? <FaRegMoon className="text-white" onClick={handleThemeSwitched}/> : <IoSunnyOutline className="text-yellow-500" onClick={handleThemeSwitched}/>
+                          toggle ? <FaRegMoon className="text-gray-600" onClick={handleThemeSwitched}/> : <IoSunnyOutline className="text-yellow-500" onClick={handleThemeSwitched}/>
                         }
                       </div>
                       </div>
