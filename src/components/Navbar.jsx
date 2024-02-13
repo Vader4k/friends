@@ -29,7 +29,7 @@ const Navbar = () => {
   const [ isprofileOpen, setIsProfileOpen ] = useState(false)
 
   // hamburger state for medium and mobile screen
-  const [ isnavOpen, setIsNavOpen ] = useState(true)
+  const [ isnavOpen, setIsNavOpen ] = useState(false)
 
   // come back for dark mode
   const [theme, setTheme] = useState(null);
