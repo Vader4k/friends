@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react"
 import { logoBold, jenna, bobby, dan, nelly, milly, elise, edward, david, daniel, stella, pizza, slicer } from '../assets'
 
-import { CiHeart, CiChat1, CiSearch, CiFilter, CiSettings } from "react-icons/ci";
+import { CiHeart, CiChat1, CiSearch, CiFilter, CiSettings, CiBookmark } from "react-icons/ci";
 import { FiHelpCircle, FiShoppingCart } from "react-icons/fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
-import { IoPersonRemoveOutline, IoPersonAddOutline, IoSunnyOutline  } from "react-icons/io5";
+import { IoPersonRemoveOutline, IoPersonAddOutline, IoSunnyOutline, IoSettingsOutline ,IoLogOutOutline } from "react-icons/io5";
 import { PiYoutubeLogoThin } from "react-icons/pi";
 import { SlPicture } from "react-icons/sl";
-import { GoTag } from "react-icons/go";
+import { GoTag, GoPerson } from "react-icons/go";
 import { RiLogoutCircleRLine } from "react-icons/ri";
+import { SlArrowDown, SlFeed, SlSupport  } from "react-icons/sl";
+import { MdOutlineSlowMotionVideo } from "react-icons/md";
 import { FaRegMoon } from "react-icons/fa";
-
 // medium screen navbar icon
 import { FaBars } from "react-icons/fa6";
 
@@ -26,6 +27,9 @@ const Navbar = () => {
   const [ isexploreOpen, setIsExploreOpen ] = useState(false)
   const [ iscartOpen, setIsCartOpen ] = useState(false)
   const [ isprofileOpen, setIsProfileOpen ] = useState(false)
+
+  // hamburger state for medium and mobile screen
+  const [ isnavOpen, setIsNavOpen ] = useState(true)
 
   // come back for dark mode
   const [theme, setTheme] = useState(null);
@@ -81,10 +85,103 @@ const Navbar = () => {
               <div className="flex items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all">
                 <TbGridDots onClick={()=> setIsExploreOpen((prev) => (!prev))}/>
               </div>
-            </div>
+          </div>
 
-            <div className="text-[1.2rem] text-gray-400 flex sm:hidden items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all">
+            <div className="text-[1.2rem] text-gray-400 flex sm:hidden items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all relative">
               <FaBars />
+              {
+                isnavOpen && (
+                  <div className="dark:bg-customDark1 dark:text-white w bg-white text-gray-600 absolute z-[99999] py-3 w-[100vw] top-[50px] right-[-10px]">
+                    <div className="flex flex-col gap-6 w-full">
+                      <div className="flex justify-between items-center w-full border-b pb-3 px-3">
+                        <div className="flex items-center gap-2 ">
+                          <img src={jenna} alt="profile_photo" className="w-[40px] h-[40px] rounded-full object-contain"/>
+                          <h1 className="text-[0.75rem]">JENNA DAVIS</h1>
+                        </div>
+                        <div onClick={()=> settoggle((prev) => (!prev))}>
+                        {
+                          toggle ? <FaRegMoon className="text-white" onClick={handleThemeSwitched}/> : <IoSunnyOutline className="text-yellow-500" onClick={handleThemeSwitched}/>
+                        }
+                      </div>
+                      </div>
+                      <div className="flex flex-col gap-6 w-full text-[0.8em] text-gray-400 border-b">
+                        <div className="w-full items-center flex justify-between px-8">
+                          <div className="flex items-center gap-2">
+                            <SlFeed />
+                            <span>Feed</span>
+                          </div>
+                          <div className="dark:text-white dark:bg-customBlue px-1 w-[30px] h-[25px] flex items-center justify-center bg-whiteBg rounded-full text-[0.75rem]">
+                            87
+                          </div>
+                        </div>
+                        <div className="w-full items-center flex justify-between px-7">
+                          <div className="flex items-center gap-2">
+                            <MdOutlineSlowMotionVideo className="text-[1rem]"/>
+                            <span>Watch</span>
+                          </div>
+                          <div className="dark:text-white dark:bg-customBlue px-1 w-[30px] h-[25px] flex items-center justify-center bg-whiteBg rounded-full text-[0.75rem]">
+                            21
+                          </div>
+                        </div>
+                        <div className="w-full items-center flex justify-between px-7">
+                          <div className="flex items-center gap-2">
+                            <CiHeart className="text-[1.2rem]"/>
+                            <span>Friend Request</span>
+                          </div>
+                          <div className="dark:text-white dark:bg-customBlue px-1 w-[30px] h-[25px] flex items-center justify-center bg-whiteBg rounded-full text-[0.75rem]">
+                            3
+                          </div>
+                        </div>
+                        <div className="w-full items-center flex justify-between px-7">
+                          <div className="flex items-center gap-2">
+                            <GoPerson />
+                            <span>Profile</span>
+                          </div>
+                        </div>
+                        <div className="w-full items-center flex justify-between px-7">
+                          <div className="flex items-center gap-2">
+                            <FiShoppingCart />
+                            <span>Cart</span>
+                          </div>
+                          <div className="dark:text-white dark:bg-customBlue w-[30px] h-[25px] flex items-center justify-center bg-whiteBg rounded-full text-[0.75rem]">
+                            3
+                          </div>
+                        </div>
+                        <div className="w-full items-center flex justify-between px-7">
+                          <div className="flex items-center gap-2">
+                            <CiBookmark />
+                            <span>Bookmarks</span>
+                          </div>
+                        </div>
+                        <div className="w-full flex justify-between items-center px-3">
+                          <div className="flex items-center py-2 gap-3">
+                            <GoPerson className="text-[1.4rem] text-customBlue"/>
+                            <span className="text-[0.8rem] text-gray-700 dark:text-white">ACCOUNT</span>
+                          </div>
+                          <div>
+                            <SlArrowDown className="text-[0.8rem] text-gray-400"/>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div className="flex flex-col gap-6 w-full text-[0.8em] text-gray-400 pb-4">
+                        <div className="flex items-center gap-2 px-7">
+                              <SlSupport />
+                              <span>Support</span>
+                          </div>
+                          <div className="flex items-center gap-2 px-7">
+                              <IoSettingsOutline className="text-[1.2rem]"/>
+                              <span>Settings</span>
+                          </div>
+                          <div className="flex items-center gap-2 px-7">
+                              <IoLogOutOutline className="text-[1.2rem]"/>
+                              <span>Logout</span>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                )
+              }
             </div>
 
         </div>

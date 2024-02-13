@@ -7,7 +7,7 @@ import { dan, bobby, elise, nelly, lana, gaelle, mike, rolf } from '../assets'
 
 const Rightbar = () => {
   return (
-    <section className="flex-1 ms:flex ms:flex-col hidden gap-6">
+    <section className="flex-1 md:flex md:flex-col hidden gap-6">
       {/* STORIES */}
       <div className="flex flex-col justify-between items-center w-full py-2 rounded-xl bg-white dark:bg-customDark4">
         <div className="flex items-center justify-between p-4 w-full border-b dark:border-gray-700">
