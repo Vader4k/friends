@@ -6,7 +6,7 @@ import { FiHelpCircle, FiShoppingCart } from "react-icons/fi";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { TbGridDots } from "react-icons/tb";
 import { BsBell } from "react-icons/bs";
-import { IoPersonRemoveOutline, IoPersonAddOutline, IoSunnyOutline, IoSettingsOutline ,IoLogOutOutline } from "react-icons/io5";
+import { IoPersonRemoveOutline, IoPersonAddOutline, IoSunnyOutline, IoSettingsOutline ,IoLogOutOutline, IoClose } from "react-icons/io5";
 import { PiYoutubeLogoThin } from "react-icons/pi";
 import { SlPicture } from "react-icons/sl";
 import { GoTag, GoPerson } from "react-icons/go";
@@ -88,7 +88,9 @@ const Navbar = () => {
           </div>
 
             <div className="text-[1.2rem] text-gray-400 flex sm:hidden items-center justify-center h-[40px] w-[40px] rounded-md hover:bg-blue-500 hover:text-white transition-all relative">
-              <FaBars />
+              {
+                isnavOpen ? <IoClose className="text-[1.2rem]" onClick={()=> setIsNavOpen(false)}/> : <FaBars onClick={()=> setIsNavOpen(true)}/>
+              }
               {
                 isnavOpen && (
                   <div className="dark:bg-customDark1 dark:text-white w bg-white text-gray-600 absolute z-[99999] py-3 w-[100vw] top-[50px] right-[-10px]">
